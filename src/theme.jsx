@@ -1,15 +1,18 @@
 import { createTheme } from "@mui/material";
 import { blueGrey } from "@mui/material/colors";
 
-const abu = blueGrey["600"];
+const abu = blueGrey["800"];
 
 export const theme = createTheme({
   palette: {
     primary: {
       main: "#F58634",
       light: abu,
-      dark: "#008970",
+      dark: "#002C26",
     },
+    secondary:{
+      main: "#C4FCF0"
+    }
   },
   breakpoints: {
     values: {

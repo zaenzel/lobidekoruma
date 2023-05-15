@@ -1,4 +1,10 @@
-import { Box, Container, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 const Service = () => {
@@ -18,7 +24,7 @@ const Service = () => {
   ];
 
   return (
-    <Container>
+    <Container sx={{ py: 5 }}>
       <Stack spacing={2} sx={{ py: 5 }}>
         <Typography
           variant="h2"
@@ -55,43 +61,18 @@ const Service = () => {
             return (
               <Paper
                 key={e.text}
+                elevation={5}
                 sx={{
-                  background: "#004d40",
+                  background: "#F58634",
                   px: 5,
                   py: 3,
                   width: "100%",
                   maxWidth: 300,
-                  position: "relative",
                 }}
-                elevation={5}
               >
-                <Box
-                  sx={{
-                    background: "white",
-                    px: 1,
-                    py: "12%",
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    borderTopRightRadius:"100%",
-                    borderEndEndRadius:"100%"
-                  }}
-                />
-                 <Box
-                  sx={{
-                    background: "white",
-                    px: 1,
-                    py: "12%",
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    borderTopLeftRadius:"100%",
-                    borderBottomLeftRadius:"100%"
-                  }}
-                />
                 <Typography
                   variant="h5"
-                  fontSize={{ mobileS: "1.6rem", laptop: "2rem" }}
+                  fontSize={{ mobileS: "1rem", laptop: "1.5rem" }}
                   fontWeight={700}
                   align="center"
                   color={"white"}
