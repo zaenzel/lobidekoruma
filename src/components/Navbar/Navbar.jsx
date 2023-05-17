@@ -26,8 +26,8 @@ const Navbar = () => {
   const navItems = [
     { value: "Beranda", path: "/" },
     { value: "Tentang Kami", path: "/about" },
-    { value: "Layanan", path: "service" },
-    { value: "Kontak", path: "contact" },
+    { value: "Layanan", path: "/service" },
+    { value: "Kontak", path: "/contact" },
   ];
 
   const StyledToolbar = styled(Toolbar)({
