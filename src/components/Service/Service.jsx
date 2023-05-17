@@ -72,7 +72,7 @@ const Service = () => {
               >
                 <Typography
                   variant="h5"
-                  fontSize={{ mobileS: "1rem", laptop: "1.5rem" }}
+                  fontSize={{ mobileS: "1.2rem", laptop: "1.7rem" }}
                   fontWeight={700}
                   align="center"
                   color={"white"}

@@ -122,7 +122,7 @@ const WhyUs = () => {
 */
 
   return (
-    <Container sx={{ background: "#f5f5f5", px: 5, py:10, pb:30 }}>
+    <Container sx={{ background: "#f5f5f5", px: 5, py: 10, pb: 30 }}>
       <Typography
         component={"h1"}
         variant="h2"
@@ -137,7 +137,7 @@ const WhyUs = () => {
         return (
           <Stack
             key={e.id}
-            direction={{ tablet: "row" }}
+            direction={{ tablet: i % 2 === 0 ? "row-reverse" : "row" }}
             rowGap={5}
             spacing={5}
             justifyContent={"space-center"}
@@ -152,7 +152,7 @@ const WhyUs = () => {
               </a>
             </ImgWhyUs>
 
-            <Stack flex={1}>
+            <Stack flex={1} sx={{px:{tablet: 5, laptop: 10}}}>
               <Typography
                 variant="h3"
                 component={"h3"}

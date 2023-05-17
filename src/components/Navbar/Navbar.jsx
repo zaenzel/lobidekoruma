@@ -10,7 +10,9 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Slide,
   Toolbar,
+  useScrollTrigger,
 } from "@mui/material";
 import LogoFull from "../../icons/LogoFull";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -47,7 +49,10 @@ const Navbar = () => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.value} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }} onClick={() => navigate(item.path)}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => navigate(item.path)}
+            >
               <ListItemText primary={item.value} />
             </ListItemButton>
           </ListItem>
@@ -56,9 +61,42 @@ const Navbar = () => {
     </Box>
   );
 
+  const NavButton = styled(Button)({
+    boxShadow: "none",
+    textTransform: "none",
+    lineHeight: 1.5,
+    fontSize: 18,
+    borderRadius: 0,
+    color: "black",
+    fontWeight: 500,
+    fontFamily: "Source Sans Pro, sans-serif",
+    "&:hover": {
+      backgroundColor: "white",
+      color: "#F58634",
+      borderBottom: "1px solid",
+      boxShadow: "none",
+    },
+    "&:active": {
+      backgroundColor: "white",
+      color: "#F58634",
+      borderBottom: "1px solid",
+      boxShadow: "none",
+    },
+    "&:focus": {
+      backgroundColor: "white",
+      color: "#F58634",
+      borderBottom: "1px solid",
+      boxShadow: "none",
+    },
+  });
+
   return (
     <>
-      <AppBar position="sticky" component="nav">
+      <AppBar
+        position="sticky"
+        component="nav"
+        sx={{ px: { mobileL: 2 }, background: "white" }}
+      >
         <StyledToolbar>
           <LogoFull
             sx={{ width: 200 }}
@@ -67,16 +105,17 @@ const Navbar = () => {
             xmlns="http://www.w3.org/2000/svg"
             fontSize="large"
           />
-          <Box sx={{ display: { mobileS: "none", tablet: "block" } }}>
+          <Box
+            sx={{
+              gap: { tablet: 1, laptop: 5 },
+              display: { mobileS: "none", tablet: "flex" },
+            }}
+          >
             {navItems.map((item) => {
               return (
-                <Button
-                  key={item.value}
-                  sx={{ color: "black", fontSize: "medium" }}
-                  onClick={() => navigate(item.path)}
-                >
+                <NavButton key={item.value} onClick={() => navigate(item.path)}>
                   {item.value}
-                </Button>
+                </NavButton>
               );
             })}
           </Box>
@@ -92,7 +131,6 @@ const Navbar = () => {
           </IconButton>
         </StyledToolbar>
       </AppBar>
-
       <Drawer
         anchor="left"
         onClose={() => setOpenDrawer(false)}

@@ -6,10 +6,11 @@ const CardAction = () => {
   const WrapperCard = styled(Box)({
     display: "flex",
     justifyContent: "center",
-    position:"absolute",
-    top:-100,
-    left:"50%",
-    translate:"-50%", 
+    position: "absolute",
+    top: -100,
+    left: "50%",
+    translate: "-50%",
+    width:"80%",
   });
 
   const AskText = styled(Typography)(({ theme }) => ({
@@ -24,9 +25,9 @@ const CardAction = () => {
     padding: "6px 12px",
     border: "1px solid",
     lineHeight: 1.5,
-    fontSize:20, 
-    color:"white",
-    fontWeight:600,
+    fontSize: 20,
+    color: "white",
+    fontWeight: 600,
     backgroundColor: "#0063cc",
     borderColor: "#0063cc",
     fontFamily: "Source Sans Pro, sans-serif",
@@ -47,26 +48,23 @@ const CardAction = () => {
 
   return (
     <WrapperCard>
-      <Paper
-        elevation={3}
-        sx={{ background: "#F58634", py: 5, px: { mobileS: 5, tablet: 10 }, }}
-      >
-        <Stack alignItems={"center"} spacing={3} >
+      <Paper elevation={3} sx={{ background: "#F58634", py: 5, px:{mobileS:5, tablet:10}}}>
+        <Stack alignItems={"center"} spacing={3}>
           <Typography
             component={"h2"}
             variant="h2"
             fontWeight={800}
-            fontSize={{mobileS:"1.8rem", tablet: "2rem" }}
+            fontSize={{ mobileS: "1.8rem", tablet: "2.5rem" }}
             color={"white"}
           >
             Let's Talk
           </Typography>
-          <Stack >
+          <Stack>
             <AskText
               component={"p"}
               variant="subtitle1"
               align="center"
-              fontSize={{mobileS:"1rem", tablet: "1.2rem" }}
+              fontSize={{ mobileS: "1rem", tablet: "1.2rem" }}
             >
               Ingin membangun rumah?
             </AskText>
@@ -79,7 +77,11 @@ const CardAction = () => {
               Butuh jasa dalam bidang general kontraktor?
             </AskText>
           </Stack>
-          <BootstrapButton variant="contained" disableRipple endIcon={<DoubleArrow />}>
+          <BootstrapButton
+            variant="contained"
+            disableRipple
+            endIcon={<DoubleArrow />}
+          >
             Hubungi Kami
           </BootstrapButton>
         </Stack>

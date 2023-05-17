@@ -19,7 +19,7 @@ import {
   Typography,
   styled,
 } from "@mui/material";
-import icon from "/icon-footer.svg";
+import icon from "/town.svg";
 import CardAction from "../CardAction/CardAction";
 import React from "react";
 
@@ -27,19 +27,17 @@ const Footer = () => {
   const TitleItemsFooter = styled(Typography)({
     color: "white",
     fontWeight: 700,
-    fontSize: "1.6rem",
+    fontSize: "1.4rem",
   });
 
   const ItemFooter = styled(Typography)({
     color: "white",
     fontWeight: 500,
-    fontSize: "1.2rem",
+    fontSize: "1rem",
   });
 
   const ContainerFooter = styled(Box)(({ theme }) => ({
     background: "black",
-    paddingBlock: 40,
-    paddingInline: 20,
     paddingTop: 300,
     position: "relative",
   }));
@@ -100,7 +98,7 @@ const Footer = () => {
         />
       </Box>
       <Box sx={{ width: "100%", mt: { mobileS: 5, tablet: 10 } }}>
-        <Grid container gridRow={{ tablet: 3 }}>
+        <Grid container gridRow={{ tablet: 3 }} sx={{px:{mobileS:2, mobileL: 5}}}>
           <Grid item tablet={4}>
             <Stack>
               <TitleItemsFooter component={"h4"} variant="h4">
