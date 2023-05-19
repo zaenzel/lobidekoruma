@@ -27,9 +27,9 @@ const Service = () => {
     <Container sx={{ py: 5 }}>
       <Stack spacing={2} sx={{ py: 5 }}>
         <Typography
+        component={"h1"}
           variant="h2"
           fontWeight={700}
-          fontSize={{ tablet: "3rem" }}
           align="center"
           color={"primary.light"}
         >

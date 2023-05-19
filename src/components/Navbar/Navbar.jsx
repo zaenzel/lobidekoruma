@@ -95,7 +95,7 @@ const Navbar = () => {
       <AppBar
         position="sticky"
         component="nav"
-        sx={{ px: { mobileL: 2 }, background: "white" }}
+        sx={{ px: { mobileL: 2 }, background: "white", zIndex:1600 }}
       >
         <StyledToolbar>
           <LogoFull
