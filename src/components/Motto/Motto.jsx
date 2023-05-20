@@ -1,26 +1,7 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
+import data from "../../dummy/dataMotto";
 
 const Motto = () => {
-  const data = [
-    {
-      title: "Integritas",
-      img: "/images/integritas.jpg",
-    },
-    {
-      title: "Disiplin",
-      img: "/images/disiplin.jpg",
-    },
-    {
-      title: "Kerja Sama",
-      img: "/images/teamwork.jpg",
-    },
-    {
-      title: "Tanggung Jawab Sosial",
-      img: "/images/responsibility.jpg",
-    }
-  ]
-
-
   const ImgMotto = styled(Box)(({ img }) => ({
     backgroundImage: `url(${img})`,
     backgroundRepeat: "no-repeat",
@@ -58,22 +39,28 @@ const Motto = () => {
         >
           {data.map((e, i) => {
             return (
-              <Stack spacing={2}
+              <Stack
+                spacing={2}
                 key={i}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  flex:3    
+                  flex: 3,
                 }}
               >
-                <ImgMotto img={e.img} />
+                <ImgMotto img={e.img}>
+                  <a href="https://www.freepik.com" style={{ opacity: 0 }}>
+                    designed by Storyset - Freepik.com
+                  </a>
+                </ImgMotto>
                 <Typography
                   component={"h5"}
                   variant="h4"
                   color={"primary.light"}
-                  fontWeight={500}
+                  fontWeight={600}
                   align="center"
+                  fontSize={{mobileS: "1.2rem", tablet: "1.5rem"}}
                 >
                   {e.title}
                 </Typography>
