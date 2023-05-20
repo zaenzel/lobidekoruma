@@ -40,9 +40,9 @@ const Motto = () => {
       <Typography
         component={"h1"}
         variant="h2"
-        color={"primary.light"}
         fontWeight={700}
-        sx={{ textAlign: { tablet: "center" } }}
+        color={"primary.light"}
+        fontSize={{ mobileS: "1.5rem", tablet: "2.3rem" }}
       >
         Motto Perusahaan
       </Typography>
