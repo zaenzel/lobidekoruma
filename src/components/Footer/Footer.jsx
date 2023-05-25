@@ -46,19 +46,21 @@ const Footer = () => {
     {
       name: <ItemFooter>Telepon : 02183735523</ItemFooter>,
       icon: <Call fontSize="inherit" sx={{ color: "white" }} />,
-      link: "",
+      link: "tel:+62895-6227-48172",
     },
     {
       name: <ItemFooter>WhatsApp : 081263037069</ItemFooter>,
       icon: <WhatsApp fontSize="inherit" sx={{ color: "white" }} />,
-      link: "",
+      link: "https://wa.me/6281263037069?text=Hallo%20saya%20ingin%20berdikusi%20tentang%20lobidekoruma",
     },
     {
       name: <ItemFooter>Email : lobidekoruma@gmail.com</ItemFooter>,
       icon: <Email fontSize="inherit" sx={{ color: "white" }} />,
-      link: "",
+      link: "mailto:lobidekoruma@gmail.com",
     },
   ];
+
+  // https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@example.com
 
   const medsos = [
     {
@@ -98,14 +100,23 @@ const Footer = () => {
         />
       </Box>
       <Box sx={{ width: "100%", mt: { mobileS: 5, tablet: 10 } }}>
-        <Grid container gridRow={{ tablet: 3 }} sx={{px:{mobileS:2, mobileL: 5}}}>
+        <Grid
+          container
+          gridRow={{ tablet: 3 }}
+          sx={{ px: { mobileS: 2, mobileL: 5 } }}
+        >
           <Grid item tablet={4}>
             <Stack>
               <TitleItemsFooter component={"h4"} variant="h4">
                 Kantor
               </TitleItemsFooter>
               <List>
-                <ListItemButton sx={{ fontSize: 25 }} component="a" href="/">
+                <ListItemButton
+                  sx={{ fontSize: 25 }}
+                  component="a"
+                  href="https://goo.gl/maps/p2LFo3sCtjKS85GM6"
+                  target="blank"
+                >
                   <ListItemIcon>
                     <LocationOn sx={{ color: "white" }} fontSize="inherit" />
                   </ListItemIcon>
@@ -135,6 +146,7 @@ const Footer = () => {
                       component="a"
                       href={e.link}
                       key={e.name}
+                      target="blank"
                     >
                       <ListItemIcon>{e.icon}</ListItemIcon>
                       <ListItemText primary={e.name} />
