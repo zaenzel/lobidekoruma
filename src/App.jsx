@@ -1,21 +1,59 @@
+import { Suspense, lazy } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Error from "./pages/Error";
-import Service from "./pages/Service";
-import Contact from "./pages/Contact";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Error = lazy(() => import("./pages/Error"));
+const Service = lazy(() => import("./pages/Service"));
+const Contact = lazy(() => import("./pages/Contact"));
+import Loading from "./pages/Loading";
 
 function App() {
   return (
     <Routes>
       <Route path="/">
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="service" element={<Service />} />
-        <Route path="contact" element={<Contact />} />
+        <Route
+          index
+          element={
+            <Suspense fallback={<Loading />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="about"
+          element={
+            <Suspense fallback={<Loading />}>
+              <About />
+            </Suspense>
+          }
+        />
+        <Route
+          path="service"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Service />
+            </Suspense>
+          }
+        />
+        <Route
+          path="contact"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Contact />
+            </Suspense>
+          }
+        />
       </Route>
-      <Route path="*" index element={<Error />} />
+      <Route
+        path="*"
+        index
+        element={
+          <Suspense fallback={<Loading />}>
+            <Error />
+          </Suspense>
+        }
+      />
     </Routes>
   );
 }
