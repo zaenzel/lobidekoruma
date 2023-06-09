@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const LazyImageWhyUs = ({ image, id }) => {
   const [inView, setInview] = useState(false);
   const ref = useRef();
+  console.log(ref)
 
   let callback = (entries, observer) => {
     entries.forEach((entry) => {

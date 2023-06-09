@@ -60,24 +60,26 @@ const Footer = () => {
     },
   ];
 
-  // https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@example.com
-
   const medsos = [
     {
       name: <ItemFooter>Facebook</ItemFooter>,
       icon: <Facebook fontSize="inherit" sx={{ color: "white" }} />,
+      link: "https://web.facebook.com/profile.php?id=100093505658336",
     },
     {
       name: <ItemFooter>Instagram</ItemFooter>,
       icon: <Instagram fontSize="inherit" sx={{ color: "white" }} />,
+      link: "https://www.instagram.com/lobidekoruma/",
     },
     {
       name: <ItemFooter>Tiktok</ItemFooter>,
       icon: <Audiotrack fontSize="inherit" sx={{ color: "white" }} />,
+      link: "https://www.tiktok.com/@lobidekoruma",
     },
     {
       name: <ItemFooter>LinkedIn</ItemFooter>,
       icon: <LinkedIn fontSize="inherit" sx={{ color: "white" }} />,
+      link: "https://www.linkedin.com/in/lobidekoruma/",
     },
   ];
 
@@ -166,7 +168,13 @@ const Footer = () => {
                   {medsos.map((e) => {
                     return (
                       <Grid item laptop={6} key={e.name}>
-                        <ListItemButton sx={{ fontSize: 25 }}>
+                        <ListItemButton
+                          sx={{ fontSize: 25 }}
+                          component="a"
+                          href={e.link}
+                          key={e.name}
+                          target="blank"
+                        >
                           <ListItemIcon>{e.icon}</ListItemIcon>
                           <ListItemText primary={e.name} />
                         </ListItemButton>
