@@ -8,7 +8,7 @@ const data = [
   {
     id: 2,
     title: "Pengendalian Jadwal",
-    desc: "Lobi Dekoruma berkomitmen dalam penyelesaian project sesuai jadwal yang telah di tenttukan dalam rangka efesiensi dan efektifitas kerja",
+    desc: "Lobi Dekoruma berkomitmen dalam penyelesaian project sesuai jadwal yang telah di tentukan dalam rangka efesiensi dan efektifitas kerja",
     img: "/images/jadwal.jpg",
   },
   {

@@ -12,10 +12,16 @@ import {
   ListItemText,
   Slide,
   Toolbar,
+  Typography,
   useScrollTrigger,
 } from "@mui/material";
 import LogoFull from "../../icons/LogoFull";
+import HomeIcon from "@mui/icons-material/Home";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import CallIcon from "@mui/icons-material/Call";
 import MenuIcon from "@mui/icons-material/Menu";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,16 +30,27 @@ const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const navItems = [
-    { value: "Beranda", path: "/" },
-    { value: "Tentang Kami", path: "/about" },
-    { value: "Layanan", path: "/service" },
-    { value: "Kontak", path: "/contact" },
+    {
+      icon: <HomeIcon fontSize="small" />,
+      value: "Beranda",
+      path: "/",
+    },
+    {
+      icon: <PermIdentityIcon fontSize="small" />,
+      value: "Tentang Kami",
+      path: "/about",
+    },
+    {
+      icon: <HomeRepairServiceIcon fontSize="small" />,
+      value: "Layanan",
+      path: "/service",
+    },
+    { icon: <CallIcon fontSize="small" />, value: "Kontak", path: "/contact" },
   ];
 
   const StyledToolbar = styled(Toolbar)({
     display: "flex",
-    justifyContent: "space-between",
-    backgroundColor: "white",
+    justifyContent: "center",
   });
 
   const drawer = (
@@ -62,17 +79,17 @@ const Navbar = () => {
   );
 
   const NavButton = styled(Button)({
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "5px",
     boxShadow: "none",
     textTransform: "none",
-    lineHeight: 1.5,
-    fontSize: 18,
     borderRadius: 0,
-    color: "black",
-    fontWeight: 500,
+    color: "primary",
+    fontWeight: 600,
     fontFamily: "Source Sans Pro, sans-serif",
     "&:hover": {
       backgroundColor: "white",
-      color: "#F58634",
       borderBottom: "1px solid",
       boxShadow: "none",
     },
@@ -95,41 +112,65 @@ const Navbar = () => {
       <AppBar
         position="sticky"
         component="nav"
-        sx={{ px: { mobileL: 2 }, background: "white", zIndex:1600 }}
+        sx={{
+          backgroundColor: "white",
+          opacity: { tablet: "0.9" },
+          boxShadow: 0,
+          px: { mobileL: 2 },
+          zIndex: 100,
+        }}
       >
-        <StyledToolbar>
-          <LogoFull
-            sx={{ width: 200 }}
-            viewBox="0 0 1000 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            fontSize="large"
-          />
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            py: 1,
+          }}
+        >
           <Box
             sx={{
-              gap: { tablet: 1, laptop: 5 },
-              display: { mobileS: "none", tablet: "flex" },
+              gap: { mobileS: 1, tablet: 5 },
+              display: { mobileS: "flex", tablet: "flex" },
+              alignItems: "center",
             }}
           >
             {navItems.map((item) => {
               return (
                 <NavButton key={item.value} onClick={() => navigate(item.path)}>
-                  {item.value}
+                  {item.icon}
+                  <Typography
+                    
+                    component={"p"}
+                    fontSize={{ tablet: "1.2rem" }}
+                  >
+                    {" "}
+                    {item.value}
+                  </Typography>
                 </NavButton>
               );
             })}
           </Box>
 
-          <IconButton
-            color="primary"
+          {/* <IconButton
             aria-label="open drawer"
             edge="start"
-            sx={{ display: { tablet: "none" } }}
+            sx={{
+              pl:5,
+              display: {mobileS:"flex", tablet: "none" },
+              alignItems:"center",
+              background: "white",
+              borderRadius:"0 20px 20px 0",
+              boxShadow: "2px 5px 10px gray",
+              position:"absolute",
+              left:-5,
+            }}
             onClick={() => setOpenDrawer(true)}
           >
-            <MenuIcon fontSize="large" />
-          </IconButton>
-        </StyledToolbar>
+            <Typography component={"p"} fontSize={"1.2rem"} color={"primary"}>Menu</Typography>
+            <ArrowForwardIosIcon fontSize="small" color="primary" />
+          </IconButton> */}
+        </Toolbar>
       </AppBar>
       <Drawer
         anchor="left"
