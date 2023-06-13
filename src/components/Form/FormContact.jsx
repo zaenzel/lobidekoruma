@@ -46,10 +46,10 @@ const FormContact = ({ setAlert }) => {
 
     emailjs
       .sendForm(
-        "service_w76rgo1",
-        "template_ihyby78",
+        "service_0nsg2gb",
+        "template_t5hw6yn",
         form.current,
-        "xr7DLhw3rmmK6xhaf"
+        "PtEQmrQPaUyIhhffk"
       )
       .then(
         (result) => {
