@@ -2,7 +2,13 @@ import { Box, Button, TextField, styled } from "@mui/material";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+
 const FormContact = ({ setAlert }) => {
+
+  const service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID
+  const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
   const BootstrapButton = styled(Button)(({ theme }) => ({
     boxShadow: "none",
     textTransform: "none",
@@ -46,10 +52,10 @@ const FormContact = ({ setAlert }) => {
 
     emailjs
       .sendForm(
-        "service_0nsg2gb",
-        "template_t5hw6yn",
+        service_id,
+        template_id,
         form.current,
-        "PtEQmrQPaUyIhhffk"
+        publicKey
       )
       .then(
         (result) => {

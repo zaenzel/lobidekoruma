@@ -93,9 +93,9 @@ const Contact = () => {
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.78636358780773!2d106.82806331123916!3d-6.447700271058977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb4fa7c6fed9%3A0x39c9f395c0e09803!2s43%20Racing%20School!5e0!3m2!1sen!2sid!4v1686283383494!5m2!1sen!2sid"
           width="100%"
           height="450"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </Box>
       <Footer />

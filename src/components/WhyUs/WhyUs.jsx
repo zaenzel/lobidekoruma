@@ -18,7 +18,7 @@ const WhyUs = () => {
       {data.map((e, i) => {
         return (
           <Stack
-            key={e.id}
+            key={i}
             direction={{ tablet: i % 2 === 0 ? "row-reverse" : "row" }}
             rowGap={5}
             spacing={5}

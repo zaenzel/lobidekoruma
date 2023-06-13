@@ -141,13 +141,13 @@ const Footer = () => {
                 Kontak Kami
               </TitleItemsFooter>
               <List>
-                {contacts.map((e) => {
+                {contacts.map((e, i) => {
                   return (
                     <ListItemButton
                       sx={{ fontSize: 25 }}
                       component="a"
                       href={e.link}
-                      key={e.name}
+                      key={i}
                       target="blank"
                     >
                       <ListItemIcon>{e.icon}</ListItemIcon>
@@ -165,14 +165,14 @@ const Footer = () => {
               </TitleItemsFooter>
               <List>
                 <Grid container>
-                  {medsos.map((e) => {
+                  {medsos.map((e, i) => {
                     return (
                       <Grid item laptop={6} key={e.name}>
                         <ListItemButton
                           sx={{ fontSize: 25 }}
                           component="a"
                           href={e.link}
-                          key={e.name}
+                          key={i}
                           target="blank"
                         >
                           <ListItemIcon>{e.icon}</ListItemIcon>

@@ -5,23 +5,18 @@ import {
   Button,
   Divider,
   Drawer,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
-  Slide,
   Toolbar,
   Typography,
-  useScrollTrigger,
 } from "@mui/material";
 import LogoFull from "../../icons/LogoFull";
 import HomeIcon from "@mui/icons-material/Home";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 import CallIcon from "@mui/icons-material/Call";
-import MenuIcon from "@mui/icons-material/Menu";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -47,11 +42,6 @@ const Navbar = () => {
     },
     { icon: <CallIcon fontSize="small" />, value: "Kontak", path: "/contact" },
   ];
-
-  const StyledToolbar = styled(Toolbar)({
-    display: "flex",
-    justifyContent: "center",
-  });
 
   const drawer = (
     <Box width={"200px"} sx={{ textAlign: "center" }}>
@@ -135,9 +125,9 @@ const Navbar = () => {
               alignItems: "center",
             }}
           >
-            {navItems.map((item) => {
+            {navItems.map((item, i) => {
               return (
-                <NavButton key={item.value} onClick={() => navigate(item.path)}>
+                <NavButton key={i} onClick={() => navigate(item.path)}>
                   {item.icon}
                   <Typography
                     
@@ -151,25 +141,6 @@ const Navbar = () => {
               );
             })}
           </Box>
-
-          {/* <IconButton
-            aria-label="open drawer"
-            edge="start"
-            sx={{
-              pl:5,
-              display: {mobileS:"flex", tablet: "none" },
-              alignItems:"center",
-              background: "white",
-              borderRadius:"0 20px 20px 0",
-              boxShadow: "2px 5px 10px gray",
-              position:"absolute",
-              left:-5,
-            }}
-            onClick={() => setOpenDrawer(true)}
-          >
-            <Typography component={"p"} fontSize={"1.2rem"} color={"primary"}>Menu</Typography>
-            <ArrowForwardIosIcon fontSize="small" color="primary" />
-          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer

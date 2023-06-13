@@ -10,7 +10,7 @@ const CardAction = () => {
     top: -100,
     left: "50%",
     translate: "-50%",
-    width:"80%",
+    width: "80%",
   });
 
   const AskText = styled(Typography)(({ theme }) => ({
@@ -48,7 +48,10 @@ const CardAction = () => {
 
   return (
     <WrapperCard>
-      <Paper elevation={3} sx={{ background: "#F58634", py: 5, px:{mobileS:5, tablet:10}}}>
+      <Paper
+        elevation={3}
+        sx={{ background: "#F58634", py: 5, px: { mobileS: 5, tablet: 10 } }}
+      >
         <Stack alignItems={"center"} spacing={3}>
           <Typography
             component={"h2"}
@@ -81,6 +84,8 @@ const CardAction = () => {
             variant="contained"
             disableRipple
             endIcon={<DoubleArrow />}
+            href="https://wa.me/6281263037069?text=Hallo%20saya%20ingin%20berdikusi%20tentang%20lobidekoruma"
+            target="blank"
           >
             Hubungi Kami
           </BootstrapButton>

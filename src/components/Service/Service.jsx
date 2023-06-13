@@ -57,10 +57,10 @@ const Service = () => {
             px: 1,
           }}
         >
-          {services.map((e) => {
+          {services.map((e,i) => {
             return (
               <Paper
-                key={e.text}
+                key={i}
                 elevation={5}
                 sx={{
                   background: "#F58634",
