@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Box, Container, Grid, Paper, Stack, Typography } from "@mui/material";
 import Backdrop from "../components/Hero/Backdrop";
-import image from "/images/plan.jpg";
+import image from "/images/4.jpg";
 import {
   Architecture,
   DesignServices,

@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import Backdrop from "../components/Hero/Backdrop";
-import image from "/images/done.jpg";
+import image from "/images/1.jpg";
 import FormContact from "../components/Form/FormContact";
 import CardContact from "../components/CardContact/CardContact";
 

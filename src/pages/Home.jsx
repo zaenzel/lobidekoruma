@@ -4,6 +4,7 @@ import Service from "../components/Service/Service";
 import WhyUs from "../components/WhyUs/WhyUs";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
+import Carousel from "../components/Carousel/Carousel";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Service />
       <WhyUs />
+      <Carousel />
       <Footer />
     </>
   );

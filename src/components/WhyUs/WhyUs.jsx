@@ -4,7 +4,7 @@ import LazyImageWhyUs from "../LazyImages/LazyImageWhyUs";
 
 const WhyUs = () => {
   return (
-    <Container sx={{ background: "#f5f5f5", px: 5, py: 10, pb: 30 }}>
+    <Container sx={{ background: "#f5f5f5", px: 5, py: 10, }}>
       <Typography
         component={"h1"}
         variant="h2"

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Footer from "../components/Footer/Footer";
 import Backdrop from "../components/Hero/Backdrop";
-import image from "/images/proces.jpg";
+import image from "/images/3.jpg";
 import Motto from "../components/Motto/Motto";
 
 const About = () => {
