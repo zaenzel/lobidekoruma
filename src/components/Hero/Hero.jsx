@@ -46,7 +46,7 @@ const Hero = () => {
             maxWidth={500}
             fontSize={{ mobileS: "1rem", tablet: "1.3rem" }}
           >
-            kami hadir untuk memberikan solusi untuk klien, dengan tim yang
+            kami hadir untuk memberikan solusi untuk , dengan tim yang
             berpengalaman dalam bidang kontruksi kami siap memberikan kepuasan
             serta pelayanan yang lebih baik sesuai dengan apa yang di harapkan.
           </Typography>
