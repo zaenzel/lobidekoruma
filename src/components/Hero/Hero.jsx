@@ -37,7 +37,7 @@ const Hero = () => {
             color="primary.light"
             fontSize={{ mobileS: "2rem", tablet: "3rem" }}
           >
-            Kreasi dari inpirasi
+            Kreasi dari inspirasi
           </Typography>
           <Typography
             variant="subtitle1"

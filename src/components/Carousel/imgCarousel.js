@@ -13,6 +13,7 @@ const data = [
   "/images/carousel/12.jpg",
   "/images/carousel/13.jpg",
   "/images/carousel/14.jpg",
+  "/images/carousel/15.jpeg",
 ];
 
 export default data;
