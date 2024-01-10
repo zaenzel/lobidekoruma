@@ -10,7 +10,7 @@ const CardContact = () => {
     },
     {
       icon: <WhatsApp />,
-      text: "081263037069",
+      text: "081263037069 /  081927002021",
     },
     {
       icon: <Email />,

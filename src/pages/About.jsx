@@ -64,7 +64,7 @@ const About = () => {
                 component={"p"}
                 color={"primary.light"}
               >
-                Mampu berperperan dalam upaya memberikan kontribusi terhadap
+                Mampu berperan dalam upaya memberikan kontribusi terhadap
                 masyarakat dengan memberikan hasil optimal dalam industri
                 kontruksi Indonesia melalui komitmen yang kuat dalam menjalankan
                 perusahaan dengan memegang teguh integritas, disiplin, team
